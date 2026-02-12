@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WEBNOTAS SEFAZ GO - Mockup SaaS</title>
+    <link rel="stylesheet" href="/static/styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1>WEBNOTAS SEFAZ GO</h1>
+      <p>Mockup SaaS para consulta e download de NF-e/NFC-e (modelos 55 e 65)</p>
+    </header>
+
+    <main>
+      <section class="card">
+        <h2>Cadastrar Empresa</h2>
+        <form id="company-form">
+          <div class="grid-2">
+            <label>
+              Nome
+              <input name="name" placeholder="Mercado Central LTDA" required />
+            </label>
+            <label>
+              CNPJ
+              <input name="cnpj" placeholder="00.000.000/0001-00" required />
+            </label>
+          </div>
+          <div class="grid-2">
+            <label>
+              Estratégia
+              <select name="strategy">
+                <option value="api">API Oficial (preferencial)</option>
+                <option value="portal">Portal/Automação (com risco)</option>
+              </select>
+            </label>
+            <label>
+              Alias certificado (opcional)
+              <input name="cert_alias" placeholder="cert-empresa-a1" />
+            </label>
+          </div>
+          <button type="submit">Salvar empresa</button>
+        </form>
+      </section>
+
+      <section class="card">
+        <h2>Empresas</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Empresa</th>
+              <th>CNPJ</th>
+              <th>Estratégia</th>
+              <th>Ações</th>
+            </tr>
+          </thead>
+          <tbody id="companies-body"></tbody>
+        </table>
+      </section>
+
+      <section class="card">
+        <h2>Jobs recentes</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Job</th>
+              <th>Empresa</th>
+              <th>Status</th>
+              <th>Docs</th>
+              <th>Mensagem</th>
+            </tr>
+          </thead>
+          <tbody id="jobs-body"></tbody>
+        </table>
+      </section>
+
+      <section class="card">
+        <h2>Documentos (empresa selecionada)</h2>
+        <div id="documents-header">Selecione uma empresa em “Ver docs”.</div>
+        <table>
+          <thead>
+            <tr>
+              <th>Modelo</th>
+              <th>Direção</th>
+              <th>Chave</th>
+              <th>Data</th>
+              <th>Valor</th>
+              <th>XML</th>
+            </tr>
+          </thead>
+          <tbody id="docs-body"></tbody>
+        </table>
+      </section>
+    </main>
+
+    <script src="/static/app.js"></script>
+  </body>
+</html>
