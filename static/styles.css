@@ -1,0 +1,105 @@
+:root {
+  color-scheme: light;
+  --bg: #f3f6fb;
+  --card: #fff;
+  --txt: #1f2937;
+  --muted: #6b7280;
+  --brand: #0d6efd;
+  --border: #dfe5ef;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: Inter, Segoe UI, Arial, sans-serif;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--txt);
+}
+
+header {
+  padding: 20px 28px;
+  background: #101828;
+  color: #fff;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 1.4rem;
+}
+
+header p {
+  margin: 6px 0 0;
+  color: #cdd4df;
+}
+
+main {
+  padding: 20px;
+  display: grid;
+  gap: 16px;
+}
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 14px;
+}
+
+.grid-2 {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(220px, 1fr));
+  gap: 12px;
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  font-size: 0.9rem;
+}
+
+input,
+select,
+button {
+  padding: 8px 10px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+}
+
+button {
+  margin-top: 12px;
+  background: var(--brand);
+  color: #fff;
+  cursor: pointer;
+  border: none;
+}
+
+button.secondary {
+  background: #374151;
+  margin: 0;
+  padding: 6px 8px;
+  font-size: 0.8rem;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+  font-size: 0.88rem;
+}
+
+th,
+td {
+  border-bottom: 1px solid var(--border);
+  text-align: left;
+  padding: 8px 6px;
+  vertical-align: top;
+}
+
+#documents-header {
+  color: var(--muted);
+  font-size: 0.9rem;
+}
